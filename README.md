@@ -1,4 +1,4 @@
-#Portfolio
+# Portfolio
 !["Portfolio"](https://i.imgur.com/DlIMXkx.png)
 
 ## Tools
@@ -6,6 +6,7 @@
 * HTML5 + SCSS + JS
 * CSS Grid, Flexbox
 
+## Setup
 ```
 ## Project setup
 npm install

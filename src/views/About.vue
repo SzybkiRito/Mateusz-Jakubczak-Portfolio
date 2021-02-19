@@ -1,5 +1,5 @@
 <template>
-  <div id="container">
+  <div id="container" class="page">
     <div id="about_container">
       <h1>About Me</h1>
       <div id="text">
@@ -19,7 +19,7 @@
         >
       </div>
       <div id="submitButton">
-        <button>Skills</button>
+        <button @click="pushToSkills">Skills</button>
       </div>
     </div>
     <div id="projects">
@@ -67,12 +67,16 @@
 </template>
 
 <script>
+import router from "../router";
 export default {
   name: "About",
   methods: {
     githubLink(link) {
       window.open(link, "_blank");
     },
+    pushToSkills() {
+      router.push('/skills');
+    }
   },
 };
 </script>
@@ -94,6 +98,16 @@ a {
   display: grid;
   grid-template-columns: auto auto auto;
 }
+
+@keyframes fadein {
+  0% {
+    opacity: 0.0;
+  }
+  100% {
+    opacity: 1.0;
+  }
+}
+
 #about_container {
   grid-row-start: 2;
   font-family: "Titillium Web", sans-serif;
@@ -124,6 +138,11 @@ a {
     box-shadow: inset 150px 0 2px 0px #ffffff;
     color: black;
   }
+
+  animation-name: fadein;
+  animation-duration: 2s;
+  animation-iteration-count: initial;
+
 }
 #projects {
   display: grid;
@@ -132,6 +151,10 @@ a {
   grid-row-gap: 50px;
   grid-column-start: 2;
   grid-row-start: 2;
+
+  animation-name: fadein;
+  animation-duration: 2s;
+  animation-iteration-count: initial;
 
   font-family: "Titillium Web", sans-serif;
   width: 100%;

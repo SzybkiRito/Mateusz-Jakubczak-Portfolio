@@ -66,6 +66,7 @@ export default {
   grid-template-columns: 10% 25% 25% 25%;
   grid-template-rows: auto;
 }
+
 .particle {
   position: absolute;
   border-radius: 50%;

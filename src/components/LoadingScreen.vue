@@ -1,5 +1,5 @@
 <template>
-  <div id="container">
+  <div id="loadingscreen">
     <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
   </div>
 </template>
@@ -12,24 +12,20 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-#container {
+#loadingscreen {
   background-color: #1a1a1a;
-  position: fixed;
   width: 100%;
   height: 100vh;
 
-  display: flex;
-  align-items: center;
+  display: grid;
   justify-content: center;
+  align-content: center;
 }
 .lds-roller {
   display: inline-block;
   position: relative;
   width: 80px;
   height: 80px;
-  display: -ms-inline-grid;
-  grid-template-columns: 25% 25% 25% 25%;
-  grid-column-start: 3;
 }
 .lds-roller div {
   animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
